@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DepGuard — Privacy Policy</title>
+<meta name="description" content="Privacy policy for DepGuard, an offline Android dependency analysis app.">
+<meta name="robots" content="index, follow">
+<style>
+  :root{
+    --bg:#F5F7FB; --surface:#FFFFFF; --ink:#101728; --muted:#5A6478;
+    --line:#E2E7F0; --accent:#4F7CFF; --accent-ink:#2F56D6; --ok:#1F9D6B;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0B1020; --surface:#121A2E; --ink:#EAF0FF; --muted:#9FAAC4;
+      --line:#202B45; --accent:#6D93FF; --accent-ink:#9FB6FF; --ok:#35C98A;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:40px 20px 72px}
+  header{border-bottom:1px solid var(--line); padding-bottom:24px; margin-bottom:28px}
+  h1{font-size:30px; line-height:1.2; margin:0 0 6px; letter-spacing:-.02em}
+  .sub{color:var(--muted); margin:0}
+  .pill{
+    display:inline-block; margin-top:14px; padding:5px 12px; border-radius:999px;
+    background:rgba(31,157,107,.12); color:var(--ok);
+    font-size:13px; font-weight:600; letter-spacing:.01em;
+  }
+  h2{font-size:20px; margin:38px 0 10px; letter-spacing:-.01em}
+  h3{font-size:16px; margin:22px 0 6px}
+  p{margin:0 0 14px}
+  ul{margin:0 0 14px; padding-left:20px}
+  li{margin:0 0 7px}
+  code{
+    font:14px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    background:rgba(79,124,255,.10); padding:1px 6px; border-radius:5px;
+  }
+  table{
+    width:100%; border-collapse:collapse; margin:6px 0 18px;
+    background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden;
+  }
+  th,td{padding:11px 14px; text-align:left; font-size:15px; border-bottom:1px solid var(--line)}
+  tr:last-child th,tr:last-child td{border-bottom:0}
+  th{width:38%; color:var(--muted); font-weight:600; background:rgba(127,140,170,.07)}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:18px 20px; margin:0 0 18px;
+  }
+  .card p:last-child{margin-bottom:0}
+  .yes{color:var(--ok); font-weight:700}
+  .no{color:#C6414F; font-weight:700}
+  @media (prefers-color-scheme: dark){ .no{color:#FF8A93} }
+  footer{
+    margin-top:44px; padding-top:18px; border-top:1px solid var(--line);
+    color:var(--muted); font-size:14px;
+  }
+  a{color:var(--accent-ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>DepGuard Privacy Policy</h1>
+  <p class="sub">Offline dependency analysis for Android.</p>
+  <p class="sub">Effective 6 October 2026 &middot; Last updated 6 October 2026</p>
+  <span class="pill">No data collected &middot; No internet permission</span>
+</header>
+
+<h2>1. Summary</h2>
+<div class="card">
+  <p>DepGuard does not collect, transmit, sell or share personal information. The app has no
+  account system, no analytics, no advertising SDK and no server component. It declares
+  <strong>zero Android permissions</strong> — including no <code>INTERNET</code> permission — so it is
+  technically incapable of sending your data anywhere.</p>
+  <p>Everything you paste is analysed on your device, and the results are stored only on your device.</p>
+</div>
+
+<h2>2. App identification</h2>
+<table>
+  <tr><th scope="row">App name</th><td>DepGuard</td></tr>
+  <tr><th scope="row">Package name</th><td><code>com.depguard2026.depguard</code></td></tr>
+  <tr><th scope="row">Version</th><td>1.0.0 (versionCode 1)</td></tr>
+  <tr><th scope="row">Distribution</th><td>Google Play Store</td></tr>
+  <tr><th scope="row">App function</th><td>Local analysis of Android build dependency lists</td></tr>
+</table>
+
+<h2>3. Data the app processes</h2>
+<p>When you paste build output, the app reads it as plain text and parses it locally. This can include:</p>
+<ul>
+  <li>Dependency coordinates, for example <code>androidx.core:core-ktx:1.15.0</code>.</li>
+  <li>A project label you type yourself, such as a module or project name.</li>
+  <li>Lines from Gradle output, <code>libs.versions.toml</code> or build scripts that you choose to paste.</li>
+</ul>
+<p>This text is processed in memory during analysis. <strong>The raw text you pasted is not
+retained</strong> — only the normalised result described below is written to local storage.</p>
+
+<h2>4. What is stored on your device</h2>
+<div class="card">
+  <p>Stored locally, in an on-device database:</p>
+  <ul>
+    <li>A history entry: an identifier, creation time, your project label, dependency count, issue count, health score, detected input format and a toolchain snapshot.</li>
+    <li>The parsed dependencies: group, artifact, version, scope, origin and the source line they came from.</li>
+    <li>The findings: type, severity, subject, details and location.</li>
+  </ul>
+  <p>Stored locally, in on-device preferences: appearance mode, whether informational and
+  heuristic findings are shown, dynamic colour, and whether onboarding has been completed.</p>
+  <p>Nothing in this list is ever transmitted off the device.</p>
+</div>
+
+<h2>5. What is not collected</h2>
+<table>
+  <tr><th scope="row">Personal identifiers</th><td class="no">Not collected</td></tr>
+  <tr><th scope="row">Name, email, account</th><td class="no">No account exists</td></tr>
+  <tr><th scope="row">Location</th><td class="no">Not collected</td></tr>
+  <tr><th scope="row">Contacts, photos, files</th><td class="no">Not accessed</td></tr>
+  <tr><th scope="row">Device or advertising ID</th><td class="no">Not collected</td></tr>
+  <tr><th scope="row">Usage analytics / crash reports</th><td class="no">Not collected</td></tr>
+  <tr><th scope="row">Advertising</th><td class="no">No ad SDK present</td></tr>
+  <tr><th scope="row">Network requests</th><td class="no">None — no internet permission</td></tr>
+</table>
+
+<h2>6. Clipboard</h2>
+<p>The <strong>Paste</strong> and <strong>Copy report</strong> actions use the Android system clipboard,
+and only when you tap those buttons. The app does not read the clipboard in the background, does not
+watch it for changes, and does not send clipboard contents anywhere.</p>
+
+<h2>7. Permissions</h2>
+<p>DepGuard requests no Android permissions at runtime and declares none in its manifest. There is no
+storage permission, no camera, no microphone, no location and no internet access.</p>
+
+<h2>8. Backup and device transfer</h2>
+<p>Cloud backup and device-to-device transfer are explicitly disabled for this app's database and
+preferences, so analysis history is not copied to Google's servers or to another device.</p>
+
+<h2>9. Third parties</h2>
+<p>No dependency-analysis data is shared with third parties, because nothing is transmitted at all.
+The app contains no analytics, attribution, advertising or crash-reporting SDKs. Google Play itself
+handles app installation and store interactions under Google's own policies.</p>
+
+<h2>10. Children</h2>
+<p>DepGuard is a developer tool and is not directed at children. Because the app collects no personal
+information of any kind, it does not knowingly collect data from children of any age.</p>
+
+<h2>11. Retention and deletion</h2>
+<ul>
+  <li>Analysis history stays on your device until you delete it.</li>
+  <li>You can delete individual results from the <strong>History</strong> screen.</li>
+  <li><strong>Settings → Clear all local data</strong> removes every stored analysis and resets all preferences.</li>
+  <li>Uninstalling the app removes all of its local data.</li>
+</ul>
+
+<h2>12. Security</h2>
+<p>Because your data never leaves the device, there is no server-side breach surface, no data
+transit and no third-party storage to secure. Data at rest is held in the app's private storage,
+which Android isolates per application.</p>
+
+<h2>13. Changes to this policy</h2>
+<p>Any change to this policy will be published on this page with an updated date. If DepGuard ever
+gains a feature that requires a permission or network access, this policy will be revised before
+that feature ships, and the change will be stated plainly.</p>
+
+<h2>14. Contact</h2>
+<div class="card">
+  <p>Questions about this policy or about your data:</p>
+  <p><strong>Email:</strong> <!-- TODO: replace with your support email --> support@example.com</p>
+  <p>The same contact details are listed on the app's Google Play listing, and an in-app copy of
+  this policy is available under <strong>Settings → Privacy Policy</strong>.</p>
+</div>
+
+<footer>
+  <p>DepGuard &middot; package <code>com.depguard2026.depguard</code> &middot; version 1.0.0</p>
+  <p>This page loads no scripts, no fonts and no trackers from any third party.</p>
+</footer>
+
+</div>
+</body>
+</html>
